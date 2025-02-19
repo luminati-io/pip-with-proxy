@@ -27,7 +27,7 @@ A public URL may be formatted like this: `https://proxyserver:port`.
 
 ### Private Proxies
 
-Private proxies require authentication, providing enhanced security, stability, and advanced features, though they often come at a price. They deliver a fast, reliable connection to a dedicated IP address and include functionalities such as proxy authentication and rotation for improved performance and control.
+[Private proxies](https://brightdata.com/solutions/private-proxies) require authentication, providing enhanced security, stability, and advanced features, though they often come at a price. They deliver a fast, reliable connection to a [dedicated IP address](https://brightdata.com/solutions/dedicated-proxies) and include functionalities such as proxy authentication and rotation for improved performance and control.
 
 Access is usually controlled through authentication often by including a username and password as a prefix to the proxy URL like this: `https://username:password@proxyserver:port`.
 
@@ -42,7 +42,7 @@ The [following `proxy-list` repo](https://github.com/clarketm/proxy-list) provid
 
 Within the `proxy-list` repo, check the [`proxy-list-status.txt`](https://github.com/clarketm/proxy-list/blob/master/proxy-list-status.txt) file to find a working public proxy. This can be done by checking the file for an address that has the `success` flag next to it, indicating that it is working:
 
-![Selecting a public proxy](https://brightdata.com/wp-content/uploads/2025/02/Selecting-a-public-proxy-1024x786.png)
+![Selecting a public proxy](https://github.com/luminati-io/pip-with-proxy/blob/main/Images/Selecting-a-public-proxy.png)
 
 For this tutorial, use `45.185.162.203:999` as your public proxy address. This means the proxy server address is `http://45.185.162.203:999`.
 
@@ -192,7 +192,7 @@ If your private proxy server uses a self-signed certificate, you may encounter a
 
 ## Using pip with Rotating Proxies
 
-[Rotating proxies](/solutions/rotating-proxies) help avoid IP bans by automatically switching IP addresses for each request. This mimics multiple users and bypasses restrictions.
+[Rotating proxies](https://brightdata.com/solutions/rotating-proxies) help avoid IP bans by automatically switching IP addresses for each request. This mimics multiple users and bypasses restrictions.
 
 You can implement this by randomly selecting proxies from a list. Below is a simple bash script that installs pip packages while rotating through public proxies.
 
@@ -259,7 +259,7 @@ Successfully installed pandas-2.2.3 python-dateutil-2.9.0.post0 pytz-2025.1 six-
 
 Proxies enable developers to bypass network restrictions, access blocked resources, and optimize package download speeds. Private proxies enhance security by masking identity while also offering caching and faster connections.
 
-Unlike VPNs, which encrypt all internet traffic for greater privacy but may introduce latency, proxies serve as a lightweight alternative for pip requests. They provide a faster and more efficient way to manage dependencies without the performance overhead of a VPN.
+[Unlike VPNs](https://brightdata.com/blog/proxy-101/vpn-vs-proxy), which encrypt all internet traffic for greater privacy but may introduce latency, proxies serve as a lightweight alternative for pip requests. They provide a faster and more efficient way to manage dependencies without the performance overhead of a VPN.
 
 ## Common Mistakes and Best Practices
 
@@ -271,23 +271,23 @@ To avoid these mistakes, it’s recommended that proxy credentials are kept secu
 
 ## Using Bright Data Proxies
 
-Bright Data provides a range of IP addresses, including residential, data centers, and mobile devices. It can help you easily create proxies for your project’s needs. Let’s create a private residential proxy that you can use with pip to access packages via a different IP address.
+Bright Data provides a range of [proxy services](https://brightdata.com/proxy-types), including residential, data centers, and mobile devices. It can help you easily create proxies for your project’s needs. Let’s create a private [residential proxy](https://brightdata.com/proxy-types/residential-proxies) that you can use with pip to access packages via a different IP address.
 
-Start by signing up for a free Bright Data account. Then navigate to the [user dashboard](/cp/start/).
+Start by signing up for a free Bright Data account. Then navigate to the [user dashboard](https://brightdata.com/cp/start/).
 
 On the side menu, click on **Proxies & Scraping**:
 
-![Bright Data proxies](https://brightdata.com/wp-content/uploads/2025/02/Bright-Data-proxies-1024x521.png)
+![Bright Data proxies](https://github.com/luminati-io/pip-with-proxy/blob/main/Images/Bright-Data-proxies-2048x1041.png)
 
 After the form loads, set up a new residential proxy. Using the default settings will assign you a shared IP address, which is used by multiple Bright Data users.
 
-![Creating a residential proxy](https://brightdata.com/wp-content/uploads/2025/02/Creating-a-residential-proxy-1024x520.png)
+![Creating a residential proxy](https://github.com/luminati-io/pip-with-proxy/blob/main/Images/Creating-a-residential-proxy-2048x1040.png)
 
 If you need an IP address from a specific region, you can choose the desired country during setup.
 
 Once the proxy is created, you'll be redirected to a dashboard displaying the endpoint and authentication details. Be sure to note the username, password, and server address.
 
-![Proxy dashboard](https://brightdata.com/wp-content/uploads/2025/02/Proxy-dashboard-1024x520.png)
+![Proxy dashboard](https://github.com/luminati-io/pip-with-proxy/blob/main/Images/Proxy-dashboard-2048x1040.png)
 
 Test their availability of the endpoint values by using the `--proxy` flag:
 
